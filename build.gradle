@@ -1,0 +1,29 @@
+apply plugin: 'eclipse'
+apply plugin: 'scala'
+
+sourceSets {
+    main {
+        scala {
+            srcDirs = ['src/scala']
+        }
+    }
+    test {
+        scala {
+            srcDirs = ['test/scala']
+        }
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.scala-lang:scala-library:2.11.1'
+    compile 'org.scalatest:scalatest_2.11:2.2.4'
+    testCompile 'org.scala-lang:scala-library:2.11.1'
+    testCompile 'org.scalatest:scalatest_2.11:2.2.4'
+}
+
+
+
